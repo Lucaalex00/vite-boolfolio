@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import ProjectCard from './components/ProjectCard.vue'
 export default {
   name: 'App',
   data() {
@@ -21,13 +22,14 @@ export default {
         console.error(err);
       })
   }
-},
-
+  },
+  components: {
+    ProjectCard
+  },
   mounted() {
-    this.callApi(`${this.base_api_url}` + `${this.base_posts_url}`)
+  this.callApi(`${this.base_api_url}` + `${this.base_posts_url}`)
   }
 }
-
 </script>
 
 
@@ -36,6 +38,7 @@ export default {
   <header>Header</header>
 
   <main>
+    <ProjectCard/>
 
     <div class="container">
       <div class="row">
