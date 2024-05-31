@@ -47,10 +47,11 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition:2s;
 
         >.link>a {
             color: black;
-            transition: 1s;
+            transition: 2s;
 
             &:hover {
                 color: red;
@@ -60,6 +61,11 @@ export default {
         >.card_id {
             color: black;
             text-align: start;
+            transition: 2s;
+
+        }
+        >.title{
+            transition: 2s
         }
     }
 
@@ -71,13 +77,31 @@ export default {
         box-shadow: 1px 1px 1px 1px white;
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
+        transition:2s;
+        >img{
+            border: 1px solid white;
+            transition: 2s;
+        }
+    }
+    &:hover>.card-title{
+        background-color: black;
+        box-shadow: 1px 1px 1px 1px white;
+        >.card_id, >.title, >.link>a{
+            color: white;
+        }
+    }
+    &:hover>.card-body {
+        background-color: lightgray;
+        box-shadow: 1px 1px 1px 1px black;
+        >img{
+            border: 1px solid black;
+        }
     }
 }
 .title {
     color: black;
 }
-
 
 
 </style>

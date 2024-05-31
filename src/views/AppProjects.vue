@@ -38,7 +38,7 @@ import axios from 'axios';
 
 <template>
     <div>
-        <h1>Projects</h1>
+        <h1>PROJECTS</h1>
         <div class="container">
             <div class="row">
                 <div class="col" v-for="project in projects">

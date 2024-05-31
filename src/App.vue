@@ -8,9 +8,10 @@ export default {
 
 <template>
   <header>
-    <RouterLink class="link" to="/">Home</RouterLink>
-    <RouterLink class="link" to="/about">About</RouterLink>
-    <RouterLink class="link" to="/projects">Projects</RouterLink>
+    <RouterLink class="link" :to="{name:'home'}">Home</RouterLink>
+    <RouterLink class="link" :to="{ name: 'about' }">About</RouterLink>
+    <RouterLink class="link" :to="{name: 'projects'}">Projects</RouterLink>
+    <RouterLink class="link" :to="{name:'contacts'}">Contacts</RouterLink>
   </header>
 
   <main>
@@ -21,7 +22,22 @@ export default {
 
   </main>
 
-  <footer>Footer</footer>
+  <footer>
+    <ul>
+      <li>
+        <RouterLink class="link" to="/">Home</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="link" to="/about">About</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="link" to="/projects">Projects</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="link" to="/contacts">Contacts</RouterLink>
+      </li>
+    </ul>
+  </footer>
 </template>
 
 <style>
@@ -61,5 +77,20 @@ main{
   border: 1px solid white;
   color: white;
   padding: 1rem;
+}
+footer>ul{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  >li{
+    list-style-type: none;
+    >.link{
+      color: white;
+      transition: 1s;
+      &:hover{
+        background-color: darkgray;
+      }
+    }
+  }
 }
 </style>
