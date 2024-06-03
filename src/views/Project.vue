@@ -33,8 +33,7 @@ export default {
     <div>
         <h1>ciao</h1>
         <div v-for="project in project">
-            
-            User {{ $route.project.id }}
+            User {{ $route.params.id }}
         </div>
     </div>
 </template>
