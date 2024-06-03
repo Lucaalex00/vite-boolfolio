@@ -15,12 +15,12 @@ export default {
             <h6 class="title">Slug : {{ project.slug }}</h6>
             <div class="link"><a :href="project.link"> >>LINK<< </a>
             </div>
-
         </div>
         <!-- /.card-title -->
         <div class="card-body">
-            <img v-if=(project.cover_image) :src="project.cover_image" alt="IMAGE N/A">
+            <img v-if=(project.cover_image) :src="'/storage/'+ project.cover_image" alt="IMAGE N/A">
         </div>
+           
         <!-- /.card-body -->
     </div>
     <!-- /.card -->
