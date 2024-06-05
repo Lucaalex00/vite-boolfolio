@@ -12,7 +12,6 @@ export default {
     <RouterLink class="link" :to="{ name: 'about' }">About</RouterLink>
     <RouterLink class="link" :to="{name: 'projects'}">Projects</RouterLink>
     <RouterLink class="link" :to="{name:'contacts'}">Contacts</RouterLink>
-    <RouterLink class="link" :to="{ name: 'project' }">project</RouterLink>
   </header>
 
   <main>

@@ -22,7 +22,7 @@ import axios from 'axios';
         callApi(url) {
             axios.get(url).then(response => {
                 /*  console.log(response); */
-                this.projects = response.data.projects
+                this.projects = response.data.projects;
                 console.log(this.projects);
                 this.loading = false;
             }).catch(err => {
